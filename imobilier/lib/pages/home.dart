@@ -4,8 +4,9 @@ import 'package:http/http.dart' as http;
 import 'createCart.dart';
 import 'listpage.dart';
 import 'profile.dart';
-import 'favorites.dart';
-import 'reservation_page.dart';
+import 'favorites.dart'; // Add this import
+import 'map_page.dart';
+import 'package:imobilier/widgets/PropertyMapPage.dart';
 
 // =================== OWNER MODEL ===================
 class Owner {
@@ -123,8 +124,7 @@ class Property {
   int get hashCode => id.hashCode;
 }
 
-// =================== API URLs ===================
-const String apiUrl = "http://172.20.10.2:5000";
+const String apiUrl = "http://192.168.185.146:5000/properties";
 
 // Helper function to get image URL
 String getImageUrl(String? imagePath) {
@@ -836,6 +836,33 @@ class PropertyCard extends StatelessWidget {
                         style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
                       ),
                     ),
+                    const SizedBox(width: 10),
+                    // --- MAP BUTTON ---
+ ElevatedButton.icon(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => PropertyMapPage(
+          address: property.address, // Pass only the address
+        ),
+      ),
+    );
+  },
+  icon: const Icon(Icons.map_outlined, size: 20),
+  label: const Text("Map"),
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.blueGrey.shade800,
+    foregroundColor: Colors.white,
+    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+  ),
+),
+
+
+
+
+
                   ],
                 ),
               ],

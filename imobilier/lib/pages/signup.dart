@@ -51,7 +51,7 @@ class _SignupPageState extends State<SignupPage> {
     try {
       var request = http.MultipartRequest(
         "POST",
-        Uri.parse("http://172.20.10.2:5000/auth/signup"),
+        Uri.parse("http://192.168.185.146:5000/auth/signup"),
       );
 
       request.fields['firstName'] = _firstName.text.trim();

@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import '../widgets/app_drawer.dart';
-import 'profile.dart';
-import 'about.dart';
+import 'package:imobilier/pages/profile.dart';
+import 'package:imobilier/pages/about.dart';
 
-class MapPage extends StatelessWidget {
+class UserMapPage extends StatelessWidget {
   final Map<String, dynamic> user;
 
-  const MapPage({super.key, required this.user});
+  const UserMapPage({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Map – Biens Immobiliers"),
+        title: const Text("Map – Utilisateur"),
         backgroundColor: Colors.orange,
       ),
       drawer: AppDrawer(
@@ -34,7 +34,7 @@ class MapPage extends StatelessWidget {
               break;
             case 3:
               Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => MapPage(user: user)));
+                  context, MaterialPageRoute(builder: (_) => UserMapPage(user: user)));
               break;
             case 4:
               Navigator.push(

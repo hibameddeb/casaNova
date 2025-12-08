@@ -17,7 +17,7 @@ class _AllPropertiesPageState extends State<AllPropertiesPage> {
   String errorMessage = '';
   String searchQuery = '';
 
-  static const String baseUrl = "http://172.20.10.2:5000";
+  static const String baseUrl = "http://192.168.185.146:5000";
   static const String propertiesApi = "$baseUrl/properties";
 
   @override

@@ -1,6 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'logo_header.dart';
+import 'PropertyMapPage.dart';
+
 
 enum CardType {
   contractKeys,

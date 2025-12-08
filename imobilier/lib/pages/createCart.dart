@@ -18,7 +18,7 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
   int currentStep = 1;
   final int totalSteps = 5;
 
-  static const String baseUrl = "http://172.20.10.2:5000";
+  static const String baseUrl = "http://192.168.185.146:5000";
   static const String propertiesApi = "$baseUrl/properties";
   static const String uploadApi = "$baseUrl/upload";
 

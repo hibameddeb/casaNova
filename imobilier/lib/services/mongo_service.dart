@@ -10,7 +10,7 @@ class MongoService {
       );
       await db.open();
       _db = db;
-      print('✅ Connected to MongoDB!');
+      print(' Connected to MongoDB!');
     }
     return _db!;
   }
